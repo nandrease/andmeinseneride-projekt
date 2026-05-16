@@ -1,17 +1,16 @@
-# Näidisprojekt: Eesti asulate ilmaotsuse näidik
+# Eesti äriregistri muutuste voog
 
-See näidisprojekt ehitab väikese otsast lõpuni andmetöövoo. Projekt loeb Open-Meteo API-st valitud Eesti asulate ilmaennustuse, salvestab selle PostgreSQL-i, arvutab välitegevuste sobivuse skoori, leiab parimad 3-tunnised ajaaknad, kontrollib andmekvaliteeti ja näitab tulemust Streamliti näidikulaual. Scheduler ehk ajastaja konteiner värskendab andmeid vaikimisi iga tunni alguses.
+Käesolev andmeinseneeria projekt ehitab otsast lõpuni andmetöövoo. Projekt loeb Äriregistri avaandmete API-st igapäevased muutuste väljavõtteid EMTAK tegevusalade ja maakondade kaupa ning täiendavalt loeb Statistikaameti API-st rahvastiku andmeid. Salvestab need PostgreSQL-i, leiab valdkonnad, kus registreeritakse kõige rohkem uusi ettevõtteid ning kus on juhatuse muudatuste sagedus kõige kõrgem, presenteerib rahvastiku jaotust, kontrollib andmekvaliteeti ja näitab tulemust Superseti näidikulaual. Äriregistri avaandmed uuenevad igapäevaselt. Statistikaameti andmed uuenevad kord kuus.
+Scheduler ehk ajastaja konteiner värskendab andmeid vaikimisi iga xx alguses.
 
 ## Äriküsimus
 
-Millistes Eesti asulates ja millistel järgmistel päevadel on ilm kõige sobivam välitööde, rattaga liikumise või õues toimuva ürituse planeerimiseks?
+Millistes valdkondades registreeritakse enim uusi ettevõtteid ja kus on juhatuse muudatuste sagedus kõige kõrgem?
 
-Näidikulaud vastab sellele sobivuse skooriga ja parimate ajaakendega. Skoor arvestab nelja tegurit:
+Näidikulaud kuvab (.. siia KPI-d ja viited graafikutele?):
 
-- temperatuur;
-- sademed ja sademete tõenäosus;
-- tuulekiirus meetrites sekundis;
-- päevavalgus.
+- ...;
+- ...
 
 ## Kuidas projekt täidab nõuded
 
